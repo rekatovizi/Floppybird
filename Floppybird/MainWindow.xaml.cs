@@ -18,6 +18,9 @@ namespace Floppybird
     public partial class MainWindow : Window
     {
         private DispatcherTimer timer;
+        Random r = new Random();
+        List<Rectangle> akadalyok = new List<Rectangle>();
+
         
         public MainWindow()
         {
@@ -30,7 +33,22 @@ namespace Floppybird
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            Canvas.SetTop(img_floppybird, Canvas.GetTop(img_floppybird) + 1);
+            Canvas.SetTop(img_floppybird, Canvas.GetTop(img_floppybird) + 2);
+            akadalymozog();
+        }
+
+        private void akadalymozog()
+        {
+            Canvas.SetLeft(r_top, Canvas.GetLeft(r_top) - 5);
+            Canvas.SetLeft(r_bottom, Canvas.GetLeft(r_bottom) - 5);
+            if (Canvas.GetLeft(r_top) < -100)
+            {
+                Canvas.SetLeft(r_top, 800);
+                Canvas.SetLeft(r_bottom, 800);
+                double random = r.Next(100, 400);
+                
+            }
+
         }
 
         private void mozog(Image img_floppybird)

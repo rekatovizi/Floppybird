@@ -10,9 +10,10 @@
 
     <Grid>
         <Canvas KeyDown="Space" Background="skyBlue">
-            <Image x:Name="img_floppybird" Source="pack://application:,,,/floppybird.png" Height="25" Canvas.Left="21" Canvas.Top="205" Width="33" HorizontalAlignment="Left" VerticalAlignment="Top"  />
-            <TextBlock Canvas.Left="640" TextWrapping="Wrap" Height="434" Width="54" Background="ForestGreen"/>
-            <TextBlock Canvas.Left="639" TextWrapping="Wrap" Canvas.Top="205" HorizontalAlignment="Center" VerticalAlignment="Top" Width="56" Height="88" Background="SkyBlue"/>
+            <Image x:Name="img_floppybird" Source="pack://application:,,,/floppybird.png" Height="25" Canvas.Left="21" Canvas.Top="205" Width="33" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.ZIndex="10" />
+            <Rectangle x:Name="r_top" Width="55" Height="180" Fill="#FF224021" Canvas.Left="716" Canvas.Top="-14" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Rectangle x:Name="r_bottom" Width="55" Height="180" Fill="#FF224021" Canvas.Left="716" Canvas.Top="254" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
 
 
         </Canvas>
